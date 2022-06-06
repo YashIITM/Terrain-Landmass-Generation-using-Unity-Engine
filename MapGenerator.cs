@@ -8,7 +8,9 @@ public class MapGenerator : MonoBehaviour
     public int mapWidth;
     public int mapHeight;
     public float noiseScale;
-
+    
+    public bool autoUpdate;
+    
     //create a method to generate a map
     public void GenerateMap()
     {   //fetching the 2D float array from the Noise class
