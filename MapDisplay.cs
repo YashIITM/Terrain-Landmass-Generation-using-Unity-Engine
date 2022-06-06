@@ -5,7 +5,7 @@ using UnityEngine;
 public class MapDisplay : MonoBehaviour
 {
     //we want a reference to the renderer so that we can set its texture
-    public Renderer textureRenderer;
+    public Renderer textureRender;
     //Then create a method called 'DrawNoisemap' that takes in the 2D float array generated in 'Noise' class as 'noiseMap'.
     public void DrawNoiseMap(float[,] noiseMap)
     {
@@ -36,8 +36,8 @@ public class MapDisplay : MonoBehaviour
         //We want to apply texture to the texture renderer:
         //we do not want to enter game mode everytime we want to preview our maps
         //That means  we cannot use'textureRenderer.material' as that is only instantiated at Run Time
-        textureRenderer.sharedMaterial.mainTexture = texture;
-        textureRenderer.transform.localScale = new Vector3(width, 1, height);
+        textureRender.sharedMaterial.mainTexture = texture;
+        textureRender.transform.localScale = new Vector3(width, 1, height);
 
 
     }
