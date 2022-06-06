@@ -22,9 +22,9 @@ public class MapDisplay : MonoBehaviour
         //Create a color array first : Note 'colourMap' is a 1D array and out 'noiseMap' is a 2D array
         Color[] colourMap = new Color[width * height];
         //Now we assign the colow to each pixel
-        for(y = 0; y < height; y++)
+        for(int y = 0; y < height; y++)
         {
-            for(x = 0; x < width; x++)
+            for(int x = 0; x < width; x++)
             {   //We want color at each pixel between black and white depending on its percentage
                 //which is the same thing as value at the noiseMap(x,y)
                 colourMap[y * width + x] = Color.Lerp(Color.black, Color.white, noiseMap[x, y]);
